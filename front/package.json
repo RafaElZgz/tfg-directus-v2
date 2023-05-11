@@ -1,0 +1,25 @@
+{
+    "name": "front",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "devDependencies": {
+        "@iconify/json": "^2.2.63",
+        "@nuxt/devtools": "^0.4.6",
+        "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
+        "@types/node": "^18",
+        "@unocss/nuxt": "^0.51.12",
+        "nuxt": "^3.4.3",
+        "nuxt-directus": "^5.3.0"
+    },
+    "dependencies": {
+        "@pinia/nuxt": "^0.4.8",
+        "@vee-validate/nuxt": "^4.9.3"
+    }
+}

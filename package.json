@@ -1,0 +1,13 @@
+{
+    "name": "tfg",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "front",
+        "api"
+    ],
+    "scripts": {
+        "start": "yarn workspace api start & yarn workspace front start",
+        "dev": "yarn workspace api start & yarn workspace front dev"
+    }
+}
