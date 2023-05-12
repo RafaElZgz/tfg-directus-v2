@@ -4,9 +4,9 @@ import directusConfig from './config/directus.config';
 export default defineNuxtConfig({
     modules: [
         // '@nuxt/devtools',
+        '@nuxtjs/tailwindcss',
         '@pinia/nuxt',
         '@pinia-plugin-persistedstate/nuxt',
-        '@unocss/nuxt',
         'nuxt-directus',
     ],
 
