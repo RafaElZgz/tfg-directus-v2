@@ -11,6 +11,8 @@ const song_liked = ref(false);
 
 let player: HTMLAudioElement | null = null;
 
+const time_played = ref(0);
+
 function changePlaybackStatus() {
     if (player!.paused) {
         player!.volume = volume.value / volume_steps;
@@ -39,8 +41,8 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex btm-nav h-28 lg:pl-64 bg-gray-50">
-        <div class="flex flex-row items-center space-x-5">
+    <div class="flex h-32 btm-nav lg:pl-64 bg-gray-50">
+        <div class="flex-row items-center hidden space-x-5 md:flex">
             <div class="avatar">
                 <div class="w-20 mask mask-squircle">
                     <img
@@ -92,14 +94,22 @@ onMounted(() => {
             </div>
             <div class="flex items-center space-x-4">
                 <span>1:00</span>
-                <progress class="w-56 progress" value="33" max="100"></progress>
+                <input
+                    type="range"
+                    min="0"
+                    max="300"
+                    v-model="time_played"
+                    class="w-56 time-played range range-xs" />
                 <span>3:00</span>
             </div>
         </div>
-        <div>
+        <div class="hidden xl:flex">
             <div class="flex flex-row items-center space-x-2">
                 <label class="swap">
-                    <input @change="changeMuteStatus()" type="checkbox" />
+                    <input
+                        id="play-btn"
+                        @change="changeMuteStatus()"
+                        type="checkbox" />
                     <i
                         class="text-3xl text-gray-800 swap-off i-mdi-volume-high" />
                     <i
@@ -121,5 +131,24 @@ onMounted(() => {
 <style>
 .btm-nav > * {
     @apply cursor-default;
+}
+
+.time-played.range-xs {
+    @apply h-1.5;
+}
+
+.time-played.range-xs::-webkit-slider-thumb {
+    @apply bg-gray-800;
+}
+
+.time-played.range-xs::-moz-range-thumb {
+    @apply bg-gray-800;
+}
+
+.time-played.range-xs::-webkit-slider-runnable-track {
+    @apply h-1.5;
+}
+.time-played.range-xs::-moz-range-track {
+    @apply h-1.5;
 }
 </style>
