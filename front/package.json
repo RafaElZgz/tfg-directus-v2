@@ -21,6 +21,7 @@
     "dependencies": {
         "@egoist/tailwindcss-icons": "^1.0.7",
         "@pinia/nuxt": "^0.4.8",
-        "@vee-validate/nuxt": "^4.9.3"
+        "@vee-validate/nuxt": "^4.9.3",
+        "daisyui": "^2.51.6"
     }
 }

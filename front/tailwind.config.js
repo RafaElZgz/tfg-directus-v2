@@ -14,6 +14,18 @@ module.exports = {
         },
     },
     plugins: [
-        iconsPlugin({ collections: getIconCollections(['mdi', 'lucide']) }),
+        require('daisyui'),
+        iconsPlugin({ collections: getIconCollections(['mdi']) }),
     ],
+
+    daisyui: {
+        styled: true,
+        themes: false,
+        base: true,
+        utils: true,
+        logs: false,
+        rtl: false,
+        prefix: '',
+        darkTheme: 'dark',
+    },
 };

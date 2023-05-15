@@ -1,6 +1,13 @@
-<script setup lang="ts"></script>
-<template class="m-0">
-    <div class="flex min-h-screen bg-gray-100">
-        <NuxtPage />
+<template>
+    <div class="bg-gray-200 drawer drawer-mobile">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="flex flex-col items-center justify-center drawer-content">
+            <Header />
+            <main class="w-full h-screen">
+                <NuxtPage />
+            </main>
+            <Player />
+        </div>
+        <Sidebar />
     </div>
 </template>
