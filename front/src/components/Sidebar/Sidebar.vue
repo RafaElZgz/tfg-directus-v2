@@ -111,6 +111,11 @@ var isLoggedIn = ref(true);
     @apply bg-indigo-600 text-white shadow;
 }
 
+.sidebar {
+    scrollbar-color: #1f2937 #f9fafb;
+    scrollbar-width: thin;
+}
+
 .sidebar::-webkit-scrollbar {
     width: 12px;
 }
@@ -120,7 +125,7 @@ var isLoggedIn = ref(true);
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-    background-color: #4b5563;
+    background-color: #1f2937;
     border-radius: 20px;
     border: 3px solid #f9fafb;
 }
