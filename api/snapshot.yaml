@@ -1,5 +1,5 @@
 version: 1
-directus: 10.1.0
+directus: 10.2.0
 vendor: sqlite
 collections:
   - collection: albums
@@ -391,7 +391,7 @@ fields:
       options: null
       readonly: true
       required: false
-      sort: 6
+      sort: 7
       special:
         - cast-timestamp
         - date-created
@@ -432,7 +432,7 @@ fields:
       options: null
       readonly: true
       required: false
-      sort: 7
+      sort: 8
       special:
         - cast-timestamp
         - date-updated
@@ -549,6 +549,44 @@ fields:
       numeric_precision: null
       numeric_scale: null
       is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: albums
+    field: release_date
+    type: date
+    meta:
+      collection: albums
+      conditions: null
+      display: null
+      display_options: null
+      field: release_date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: release_date
+      table: albums
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
       is_unique: false
       is_primary_key: false
       is_generated: false
@@ -893,7 +931,7 @@ fields:
       max_length: null
       numeric_precision: null
       numeric_scale: null
-      is_nullable: true
+      is_nullable: false
       is_unique: false
       is_primary_key: false
       is_generated: false
@@ -1269,7 +1307,7 @@ fields:
       options: null
       readonly: true
       required: false
-      sort: 7
+      sort: 8
       special:
         - cast-timestamp
         - date-created
@@ -1310,7 +1348,7 @@ fields:
       options: null
       readonly: true
       required: false
-      sort: 8
+      sort: 9
       special:
         - cast-timestamp
         - date-updated
@@ -1471,7 +1509,7 @@ fields:
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: owner_id
       table: playlists
@@ -1505,7 +1543,7 @@ fields:
         folder: 3a4a700e-032e-450f-ae12-7f3336796cf1
       readonly: false
       required: false
-      sort: 6
+      sort: 7
       special:
         - file
       translations: null
@@ -1528,6 +1566,45 @@ fields:
       has_auto_increment: false
       foreign_key_table: directus_files
       foreign_key_column: id
+  - collection: playlists
+    field: public
+    type: boolean
+    meta:
+      collection: playlists
+      conditions: null
+      display: null
+      display_options: null
+      field: public
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 6
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: public
+      table: playlists
+      data_type: boolean
+      default_value: true
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: playlists
     field: songs
     type: alias
@@ -1760,7 +1837,7 @@ fields:
       note: null
       options: null
       readonly: false
-      required: false
+      required: true
       sort: 3
       special:
         - m2m
@@ -2323,12 +2400,12 @@ fields:
         relative: true
       field: date_created
       group: null
-      hidden: true
+      hidden: false
       interface: datetime
       note: null
       options: null
       readonly: true
-      required: false
+      required: true
       sort: 8
       special:
         - cast-timestamp
@@ -2703,7 +2780,7 @@ fields:
       display_options: null
       field: id
       group: null
-      hidden: false
+      hidden: true
       interface: null
       note: null
       options: null
@@ -2860,7 +2937,7 @@ fields:
       display_options: null
       field: users_id
       group: null
-      hidden: false
+      hidden: true
       interface: null
       note: null
       options: null
@@ -2898,7 +2975,7 @@ fields:
       display_options: null
       field: id
       group: null
-      hidden: false
+      hidden: true
       interface: null
       note: null
       options: null
@@ -3093,7 +3170,7 @@ fields:
       display_options: null
       field: users_id
       group: null
-      hidden: false
+      hidden: true
       interface: null
       note: null
       options: null
@@ -3131,7 +3208,7 @@ fields:
       display_options: null
       field: id
       group: null
-      hidden: false
+      hidden: true
       interface: null
       note: null
       options: null
@@ -3326,7 +3403,7 @@ fields:
       display_options: null
       field: users_id
       group: null
-      hidden: false
+      hidden: true
       interface: null
       note: null
       options: null
