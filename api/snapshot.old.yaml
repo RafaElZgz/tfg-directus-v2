@@ -2,6 +2,50 @@ version: 1
 directus: 10.1.0
 vendor: sqlite
 collections:
+  - collection: accesses
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: accesses
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: accesses
+  - collection: album_recordings
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: album_recordings
+      color: null
+      display_template: null
+      group: albums
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: album_recordings
   - collection: albums
     meta:
       accountability: all
@@ -18,56 +62,12 @@ collections:
       item_duplication_fields: null
       note: null
       singleton: false
-      sort: 1
-      sort_field: null
-      translations: null
-      unarchive_value: null
-    schema:
-      name: albums
-  - collection: albums_artists
-    meta:
-      accountability: all
-      archive_app_filter: true
-      archive_field: null
-      archive_value: null
-      collapse: open
-      collection: albums_artists
-      color: null
-      display_template: null
-      group: albums
-      hidden: true
-      icon: import_export
-      item_duplication_fields: null
-      note: null
-      singleton: false
       sort: 2
       sort_field: null
       translations: null
       unarchive_value: null
     schema:
-      name: albums_artists
-  - collection: albums_genres
-    meta:
-      accountability: all
-      archive_app_filter: true
-      archive_field: null
-      archive_value: null
-      collapse: open
-      collection: albums_genres
-      color: null
-      display_template: null
-      group: albums
-      hidden: true
-      icon: import_export
-      item_duplication_fields: null
-      note: null
-      singleton: false
-      sort: 3
-      sort_field: null
-      translations: null
-      unarchive_value: null
-    schema:
-      name: albums_genres
+      name: albums
   - collection: artists
     meta:
       accountability: all
@@ -84,12 +84,56 @@ collections:
       item_duplication_fields: null
       note: null
       singleton: false
-      sort: 2
+      sort: 4
       sort_field: null
       translations: null
       unarchive_value: null
     schema:
       name: artists
+  - collection: collaborator_types
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: collaborator_types
+      color: null
+      display_template: null
+      group: collaborators
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: collaborator_types
+  - collection: collaborators
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: collaborators
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 3
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: collaborators
   - collection: countries
     meta:
       accountability: all
@@ -106,7 +150,7 @@ collections:
       item_duplication_fields: null
       note: null
       singleton: false
-      sort: 3
+      sort: 5
       sort_field: null
       translations: null
       unarchive_value: null
@@ -128,12 +172,78 @@ collections:
       item_duplication_fields: null
       note: null
       singleton: false
-      sort: 4
+      sort: 6
       sort_field: null
       translations: null
       unarchive_value: null
     schema:
       name: genres
+  - collection: labels
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: labels
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 7
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: labels
+  - collection: playlist_recordings
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: playlist_recordings
+      color: null
+      display_template: null
+      group: playlists
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: playlist_recordings
+  - collection: playlist_types
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: playlist_types
+      color: null
+      display_template: null
+      group: playlists
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: playlist_types
   - collection: playlists
     meta:
       accountability: all
@@ -150,34 +260,56 @@ collections:
       item_duplication_fields: null
       note: null
       singleton: false
-      sort: 5
+      sort: 8
       sort_field: null
       translations: null
       unarchive_value: null
     schema:
       name: playlists
-  - collection: playlists_songs
+  - collection: recordings
     meta:
       accountability: all
       archive_app_filter: true
       archive_field: null
       archive_value: null
       collapse: open
-      collection: playlists_songs
+      collection: recordings
       color: null
       display_template: null
-      group: playlists
-      hidden: true
-      icon: import_export
+      group: null
+      hidden: false
+      icon: null
       item_duplication_fields: null
       note: null
       singleton: false
-      sort: 2
+      sort: 9
       sort_field: null
       translations: null
       unarchive_value: null
     schema:
-      name: playlists_songs
+      name: recordings
+  - collection: reproductions
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: reproductions
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 10
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: reproductions
   - collection: songs
     meta:
       accountability: all
@@ -194,34 +326,56 @@ collections:
       item_duplication_fields: null
       note: null
       singleton: false
-      sort: 6
+      sort: 11
       sort_field: null
       translations: null
       unarchive_value: null
     schema:
       name: songs
-  - collection: songs_artists
+  - collection: subscription_types
     meta:
       accountability: all
       archive_app_filter: true
       archive_field: null
       archive_value: null
       collapse: open
-      collection: songs_artists
+      collection: subscription_types
       color: null
       display_template: null
-      group: songs
-      hidden: true
-      icon: import_export
+      group: null
+      hidden: false
+      icon: null
       item_duplication_fields: null
       note: null
       singleton: false
-      sort: 2
+      sort: 12
       sort_field: null
       translations: null
       unarchive_value: null
     schema:
-      name: songs_artists
+      name: subscription_types
+  - collection: user_types
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: user_types
+      color: null
+      display_template: null
+      group: users
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      name: user_types
   - collection: users
     meta:
       accountability: all
@@ -238,102 +392,346 @@ collections:
       item_duplication_fields: null
       note: null
       singleton: false
-      sort: 7
+      sort: 13
       sort_field: null
       translations: null
       unarchive_value: null
     schema:
       name: users
-  - collection: users_albums
+  - collection: writers
     meta:
       accountability: all
       archive_app_filter: true
       archive_field: null
       archive_value: null
       collapse: open
-      collection: users_albums
+      collection: writers
       color: null
       display_template: null
-      group: users
+      group: null
       hidden: false
-      icon: import_export
+      icon: null
       item_duplication_fields: null
       note: null
       singleton: false
-      sort: 1
+      sort: 14
       sort_field: null
       translations: null
       unarchive_value: null
     schema:
-      name: users_albums
-  - collection: users_playlists
-    meta:
-      accountability: all
-      archive_app_filter: true
-      archive_field: null
-      archive_value: null
-      collapse: open
-      collection: users_playlists
-      color: null
-      display_template: null
-      group: users
-      hidden: false
-      icon: import_export
-      item_duplication_fields: null
-      note: null
-      singleton: false
-      sort: 2
-      sort_field: null
-      translations: null
-      unarchive_value: null
-    schema:
-      name: users_playlists
-  - collection: users_songs
-    meta:
-      accountability: all
-      archive_app_filter: true
-      archive_field: null
-      archive_value: null
-      collapse: open
-      collection: users_songs
-      color: null
-      display_template: null
-      group: users
-      hidden: false
-      icon: import_export
-      item_duplication_fields: null
-      note: null
-      singleton: false
-      sort: 3
-      sort_field: null
-      translations: null
-      unarchive_value: null
-    schema:
-      name: users_songs
+      name: writers
 fields:
-  - collection: albums
-    field: artists
-    type: alias
+  - collection: accesses
+    field: access_date
+    type: dateTime
     meta:
-      collection: albums
+      collection: accesses
       conditions: null
       display: null
       display_options: null
-      field: artists
+      field: access_date
       group: null
       hidden: false
-      interface: list-m2m
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: access_date
+      table: accesses
+      data_type: datetime
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accesses
+    field: id
+    type: uuid
+    meta:
+      collection: accesses
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: accesses
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accesses
+    field: playlist_recording_id
+    type: string
+    meta:
+      collection: accesses
+      conditions: null
+      display: null
+      display_options: null
+      field: playlist_recording_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: playlist_recording_id
+      table: accesses
+      data_type: varchar
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: playlist_recordings
+      foreign_key_column: id
+  - collection: accesses
+    field: user_type_id
+    type: string
+    meta:
+      collection: accesses
+      conditions: null
+      display: null
+      display_options: null
+      field: user_type_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: user_type_id
+      table: accesses
+      data_type: varchar
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: user_types
+      foreign_key_column: id
+  - collection: album_recordings
+    field: album_id
+    type: string
+    meta:
+      collection: album_recordings
+      conditions: null
+      display: null
+      display_options: null
+      field: album_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: album_id
+      table: album_recordings
+      data_type: varchar
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: albums
+      foreign_key_column: id
+  - collection: album_recordings
+    field: id
+    type: uuid
+    meta:
+      collection: album_recordings
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: album_recordings
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: album_recordings
+    field: recording_id
+    type: string
+    meta:
+      collection: album_recordings
+      conditions: null
+      display: null
+      display_options: null
+      field: recording_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
       note: null
       options: null
       readonly: false
       required: true
       sort: 4
       special:
-        - m2m
+        - m2o
       translations: null
       validation: null
       validation_message: null
       width: full
+    schema:
+      name: recording_id
+      table: album_recordings
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: recordings
+      foreign_key_column: id
+  - collection: album_recordings
+    field: track_number
+    type: integer
+    meta:
+      collection: album_recordings
+      conditions: null
+      display: null
+      display_options: null
+      field: track_number
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: track_number
+      table: album_recordings
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: albums
     field: cover_art
     type: uuid
@@ -351,7 +749,7 @@ fields:
         folder: c69407db-e049-4fa2-bf91-f720aed523e2
       readonly: false
       required: true
-      sort: 3
+      sort: null
       special:
         - file
       translations: null
@@ -375,111 +773,6 @@ fields:
       foreign_key_table: directus_files
       foreign_key_column: id
   - collection: albums
-    field: date_created
-    type: timestamp
-    meta:
-      collection: albums
-      conditions: null
-      display: datetime
-      display_options:
-        relative: true
-      field: date_created
-      group: null
-      hidden: true
-      interface: datetime
-      note: null
-      options: null
-      readonly: true
-      required: false
-      sort: 6
-      special:
-        - cast-timestamp
-        - date-created
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: date_created
-      table: albums
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: albums
-    field: date_updated
-    type: timestamp
-    meta:
-      collection: albums
-      conditions: null
-      display: datetime
-      display_options:
-        relative: true
-      field: date_updated
-      group: null
-      hidden: true
-      interface: datetime
-      note: null
-      options: null
-      readonly: true
-      required: false
-      sort: 7
-      special:
-        - cast-timestamp
-        - date-updated
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: date_updated
-      table: albums
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: albums
-    field: genres
-    type: alias
-    meta:
-      collection: albums
-      conditions: null
-      display: null
-      display_options: null
-      field: genres
-      group: null
-      hidden: false
-      interface: list-m2m
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: 5
-      special:
-        - m2m
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: albums
     field: id
     type: uuid
     meta:
@@ -495,7 +788,7 @@ fields:
       options: null
       readonly: true
       required: false
-      sort: 1
+      sort: null
       special:
         - uuid
       translations: null
@@ -519,6 +812,45 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: albums
+    field: label_id
+    type: string
+    meta:
+      collection: albums
+      conditions: null
+      display: null
+      display_options: null
+      field: label_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: label_id
+      table: albums
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: labels
+      foreign_key_column: id
+  - collection: albums
     field: name
     type: string
     meta:
@@ -534,7 +866,7 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 2
+      sort: null
       special: null
       translations: null
       validation: null
@@ -548,7 +880,7 @@ fields:
       max_length: 255
       numeric_precision: null
       numeric_scale: null
-      is_nullable: true
+      is_nullable: false
       is_unique: false
       is_primary_key: false
       is_generated: false
@@ -556,265 +888,37 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
-  - collection: albums_artists
-    field: albums_id
-    type: string
+  - collection: albums
+    field: release_date
+    type: date
     meta:
-      collection: albums_artists
+      collection: albums
       conditions: null
       display: null
       display_options: null
-      field: albums_id
-      group: null
-      hidden: true
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: albums_id
-      table: albums_artists
-      data_type: varchar
-      default_value: null
-      max_length: 36
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: albums
-      foreign_key_column: id
-  - collection: albums_artists
-    field: artists_id
-    type: string
-    meta:
-      collection: albums_artists
-      conditions: null
-      display: null
-      display_options: null
-      field: artists_id
-      group: null
-      hidden: true
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: artists_id
-      table: albums_artists
-      data_type: varchar
-      default_value: null
-      max_length: 36
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: artists
-      foreign_key_column: id
-  - collection: albums_artists
-    field: id
-    type: integer
-    meta:
-      collection: albums_artists
-      conditions: null
-      display: null
-      display_options: null
-      field: id
-      group: null
-      hidden: true
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: id
-      table: albums_artists
-      data_type: integer
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: true
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: true
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: albums_genres
-    field: albums_id
-    type: string
-    meta:
-      collection: albums_genres
-      conditions: null
-      display: null
-      display_options: null
-      field: albums_id
-      group: null
-      hidden: true
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: albums_id
-      table: albums_genres
-      data_type: varchar
-      default_value: null
-      max_length: 36
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: albums
-      foreign_key_column: id
-  - collection: albums_genres
-    field: genres_id
-    type: string
-    meta:
-      collection: albums_genres
-      conditions: null
-      display: null
-      display_options: null
-      field: genres_id
-      group: null
-      hidden: true
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: genres_id
-      table: albums_genres
-      data_type: varchar
-      default_value: null
-      max_length: 36
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: genres
-      foreign_key_column: id
-  - collection: albums_genres
-    field: id
-    type: integer
-    meta:
-      collection: albums_genres
-      conditions: null
-      display: null
-      display_options: null
-      field: id
-      group: null
-      hidden: true
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: id
-      table: albums_genres
-      data_type: integer
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: true
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: true
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: artists
-    field: biography
-    type: text
-    meta:
-      collection: artists
-      conditions: null
-      display: null
-      display_options: null
-      field: biography
+      field: release_date
       group: null
       hidden: false
-      interface: input-multiline
+      interface: datetime
       note: null
       options: null
       readonly: false
-      required: false
-      sort: 3
+      required: true
+      sort: null
       special: null
       translations: null
       validation: null
       validation_message: null
       width: full
     schema:
-      name: biography
-      table: artists
-      data_type: text
+      name: release_date
+      table: albums
+      data_type: date
       default_value: null
       max_length: null
       numeric_precision: null
       numeric_scale: null
-      is_nullable: true
+      is_nullable: false
       is_unique: false
       is_primary_key: false
       is_generated: false
@@ -838,7 +942,7 @@ fields:
       options: null
       readonly: false
       required: false
-      sort: 5
+      sort: null
       special: null
       translations: null
       validation: null
@@ -861,77 +965,33 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: artists
-    field: date_created
-    type: timestamp
+    field: description
+    type: string
     meta:
       collection: artists
       conditions: null
-      display: datetime
-      display_options:
-        relative: true
-      field: date_created
+      display: null
+      display_options: null
+      field: description
       group: null
-      hidden: true
-      interface: datetime
+      hidden: false
+      interface: input
       note: null
       options: null
-      readonly: true
+      readonly: false
       required: false
-      sort: 6
-      special:
-        - cast-timestamp
-        - date-created
+      sort: null
+      special: null
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
-      name: date_created
+      name: description
       table: artists
-      data_type: datetime
+      data_type: varchar
       default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: artists
-    field: date_updated
-    type: timestamp
-    meta:
-      collection: artists
-      conditions: null
-      display: datetime
-      display_options:
-        relative: true
-      field: date_updated
-      group: null
-      hidden: true
-      interface: datetime
-      note: null
-      options: null
-      readonly: true
-      required: false
-      sort: 7
-      special:
-        - cast-timestamp
-        - date-updated
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: date_updated
-      table: artists
-      data_type: datetime
-      default_value: null
-      max_length: null
+      max_length: 255
       numeric_precision: null
       numeric_scale: null
       is_nullable: true
@@ -958,7 +1018,7 @@ fields:
       options: null
       readonly: true
       required: false
-      sort: 1
+      sort: null
       special:
         - uuid
       translations: null
@@ -998,7 +1058,7 @@ fields:
         folder: 3cd92bb2-2f6d-4903-ac81-eda08f410bdb
       readonly: false
       required: false
-      sort: 4
+      sort: null
       special:
         - file
       translations: null
@@ -1037,7 +1097,7 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 2
+      sort: null
       special: null
       translations: null
       validation: null
@@ -1059,6 +1119,277 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: collaborator_types
+    field: date_added
+    type: dateTime
+    meta:
+      collection: collaborator_types
+      conditions: null
+      display: null
+      display_options: null
+      field: date_added
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date_added
+      table: collaborator_types
+      data_type: datetime
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: collaborator_types
+    field: id
+    type: uuid
+    meta:
+      collection: collaborator_types
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: collaborator_types
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: collaborator_types
+    field: name
+    type: string
+    meta:
+      collection: collaborator_types
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: collaborator_types
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: collaborators
+    field: collaborator_type_id
+    type: string
+    meta:
+      collection: collaborators
+      conditions: null
+      display: null
+      display_options: null
+      field: collaborator_type_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: collaborator_type_id
+      table: collaborators
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: collaborator_types
+      foreign_key_column: id
+  - collection: collaborators
+    field: id
+    type: uuid
+    meta:
+      collection: collaborators
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: collaborators
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: collaborators
+    field: playlist_id
+    type: string
+    meta:
+      collection: collaborators
+      conditions: null
+      display: null
+      display_options: null
+      field: playlist_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: playlist_id
+      table: collaborators
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: playlists
+      foreign_key_column: id
+  - collection: collaborators
+    field: user_type_id
+    type: string
+    meta:
+      collection: collaborators
+      conditions: null
+      display: null
+      display_options: null
+      field: user_type_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: user_type_id
+      table: collaborators
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: users
+      foreign_key_column: id
   - collection: countries
     field: id
     type: uuid
@@ -1113,7 +1444,7 @@ fields:
       note: null
       options: null
       readonly: false
-      required: true
+      required: false
       sort: null
       special: null
       translations: null
@@ -1162,19 +1493,57 @@ fields:
     schema:
       name: user_id
       table: directus_users
-      data_type: varchar
+      data_type: char
       default_value: null
       max_length: 36
       numeric_precision: null
       numeric_scale: null
       is_nullable: true
-      is_unique: true
+      is_unique: false
       is_primary_key: false
       is_generated: false
       generation_expression: null
       has_auto_increment: false
       foreign_key_table: users
       foreign_key_column: id
+  - collection: genres
+    field: description
+    type: string
+    meta:
+      collection: genres
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: genres
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: genres
     field: id
     type: uuid
@@ -1245,6 +1614,83 @@ fields:
       numeric_precision: null
       numeric_scale: null
       is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: labels
+    field: id
+    type: uuid
+    meta:
+      collection: labels
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: labels
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: labels
+    field: name
+    type: string
+    meta:
+      collection: labels
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: labels
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
       is_unique: true
       is_primary_key: false
       is_generated: false
@@ -1252,33 +1698,225 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
-  - collection: playlists
-    field: date_created
-    type: timestamp
+  - collection: playlist_recordings
+    field: id
+    type: uuid
     meta:
-      collection: playlists
+      collection: playlist_recordings
       conditions: null
-      display: datetime
-      display_options:
-        relative: true
-      field: date_created
+      display: null
+      display_options: null
+      field: id
       group: null
       hidden: true
-      interface: datetime
+      interface: input
       note: null
       options: null
       readonly: true
       required: false
-      sort: 7
+      sort: null
       special:
-        - cast-timestamp
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: playlist_recordings
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: playlist_recordings
+    field: playlist_id
+    type: string
+    meta:
+      collection: playlist_recordings
+      conditions: null
+      display: null
+      display_options: null
+      field: playlist_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: playlist_id
+      table: playlist_recordings
+      data_type: varchar
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: playlists
+      foreign_key_column: id
+  - collection: playlist_recordings
+    field: recording_id
+    type: string
+    meta:
+      collection: playlist_recordings
+      conditions: null
+      display: null
+      display_options: null
+      field: recording_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: recording_id
+      table: playlist_recordings
+      data_type: varchar
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: recordings
+      foreign_key_column: id
+  - collection: playlist_types
+    field: id
+    type: uuid
+    meta:
+      collection: playlist_types
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: playlist_types
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: playlist_types
+    field: name
+    type: string
+    meta:
+      collection: playlist_types
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: playlist_types
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: playlists
+    field: creation_date
+    type: dateTime
+    meta:
+      collection: playlists
+      conditions: null
+      display: null
+      display_options: null
+      field: creation_date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
         - date-created
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
-      name: date_created
+      name: creation_date
       table: playlists
       data_type: datetime
       default_value: null
@@ -1294,49 +1932,8 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: playlists
-    field: date_updated
-    type: timestamp
-    meta:
-      collection: playlists
-      conditions: null
-      display: datetime
-      display_options:
-        relative: true
-      field: date_updated
-      group: null
-      hidden: true
-      interface: datetime
-      note: null
-      options: null
-      readonly: true
-      required: false
-      sort: 8
-      special:
-        - cast-timestamp
-        - date-updated
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: date_updated
-      table: playlists
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: playlists
     field: description
-    type: text
+    type: string
     meta:
       collection: playlists
       conditions: null
@@ -1350,18 +1947,18 @@ fields:
       options: null
       readonly: false
       required: false
-      sort: 3
+      sort: null
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
       name: description
       table: playlists
-      data_type: text
+      data_type: varchar
       default_value: null
-      max_length: null
+      max_length: 255
       numeric_precision: null
       numeric_scale: null
       is_nullable: true
@@ -1388,7 +1985,7 @@ fields:
       options: null
       readonly: true
       required: false
-      sort: 1
+      sort: null
       special:
         - uuid
       translations: null
@@ -1427,17 +2024,17 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 2
+      sort: null
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
       name: name
       table: playlists
       data_type: varchar
-      default_value: Sin nombre
+      default_value: Intitulada
       max_length: 255
       numeric_precision: null
       numeric_scale: null
@@ -1449,45 +2046,6 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
-  - collection: playlists
-    field: owner_id
-    type: string
-    meta:
-      collection: playlists
-      conditions: null
-      display: null
-      display_options: null
-      field: owner_id
-      group: null
-      hidden: false
-      interface: select-dropdown-m2o
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: 5
-      special:
-        - m2o
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: owner_id
-      table: playlists
-      data_type: varchar
-      default_value: null
-      max_length: 36
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: users
-      foreign_key_column: id
   - collection: playlists
     field: picture
     type: uuid
@@ -1505,7 +2063,7 @@ fields:
         folder: 3a4a700e-032e-450f-ae12-7f3336796cf1
       readonly: false
       required: false
-      sort: 6
+      sort: null
       special:
         - file
       translations: null
@@ -1529,57 +2087,70 @@ fields:
       foreign_key_table: directus_files
       foreign_key_column: id
   - collection: playlists
-    field: songs
-    type: alias
+    field: playlist_type_id
+    type: string
     meta:
       collection: playlists
       conditions: null
       display: null
       display_options: null
-      field: songs
+      field: playlist_type_id
       group: null
       hidden: false
-      interface: list-m2m
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: 4
-      special:
-        - m2m
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: playlists_songs
-    field: added_at
-    type: timestamp
-    meta:
-      collection: playlists_songs
-      conditions: null
-      display: null
-      display_options: null
-      field: added_at
-      group: null
-      hidden: false
-      interface: datetime
+      interface: select-dropdown-m2o
       note: null
       options: null
       readonly: false
       required: true
       sort: null
       special:
-        - cast-timestamp
-        - date-created
-        - date-updated
+        - m2o
       translations: null
       validation: null
       validation_message: null
       width: full
     schema:
-      name: added_at
-      table: playlists_songs
-      data_type: datetime
+      name: playlist_type_id
+      table: playlists
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: playlist_types
+      foreign_key_column: id
+  - collection: recordings
+    field: duration
+    type: integer
+    meta:
+      collection: recordings
+      conditions: null
+      display: null
+      display_options: null
+      field: duration
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: duration
+      table: recordings
+      data_type: integer
       default_value: null
       max_length: null
       numeric_precision: null
@@ -1592,69 +2163,72 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
-  - collection: playlists_songs
-    field: id
-    type: integer
+  - collection: recordings
+    field: file
+    type: uuid
     meta:
-      collection: playlists_songs
+      collection: recordings
       conditions: null
       display: null
       display_options: null
-      field: id
+      field: file
       group: null
-      hidden: true
-      interface: null
+      hidden: false
+      interface: file
       note: null
-      options: null
+      options:
+        folder: df4accd6-d2ed-44db-8700-2646548bf09b
       readonly: false
-      required: false
+      required: true
       sort: null
-      special: null
+      special:
+        - file
       translations: null
       validation: null
       validation_message: null
       width: full
     schema:
-      name: id
-      table: playlists_songs
-      data_type: integer
+      name: file
+      table: recordings
+      data_type: char
       default_value: null
-      max_length: null
+      max_length: 36
       numeric_precision: null
       numeric_scale: null
       is_nullable: false
       is_unique: false
-      is_primary_key: true
+      is_primary_key: false
       is_generated: false
       generation_expression: null
-      has_auto_increment: true
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: playlists_songs
-    field: playlists_id
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: recordings
+    field: genre_id
     type: string
     meta:
-      collection: playlists_songs
+      collection: recordings
       conditions: null
       display: null
       display_options: null
-      field: playlists_id
+      field: genre_id
       group: null
-      hidden: true
-      interface: null
+      hidden: false
+      interface: select-dropdown-m2o
       note: null
       options: null
       readonly: false
-      required: false
+      required: true
       sort: null
-      special: null
+      special:
+        - m2o
       translations: null
       validation: null
       validation_message: null
       width: full
     schema:
-      name: playlists_id
-      table: playlists_songs
+      name: genre_id
+      table: recordings
       data_type: varchar
       default_value: null
       max_length: 36
@@ -1666,24 +2240,63 @@ fields:
       is_generated: false
       generation_expression: null
       has_auto_increment: false
-      foreign_key_table: playlists
+      foreign_key_table: genres
       foreign_key_column: id
-  - collection: playlists_songs
-    field: songs_id
-    type: string
+  - collection: recordings
+    field: id
+    type: uuid
     meta:
-      collection: playlists_songs
+      collection: recordings
       conditions: null
       display: null
       display_options: null
-      field: songs_id
+      field: id
       group: null
       hidden: true
-      interface: null
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: recordings
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: recordings
+    field: name
+    type: string
+    meta:
+      collection: recordings
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
       note: null
       options: null
       readonly: false
-      required: false
+      required: true
       sort: null
       special: null
       translations: null
@@ -1691,8 +2304,47 @@ fields:
       validation_message: null
       width: full
     schema:
-      name: songs_id
-      table: playlists_songs
+      name: name
+      table: recordings
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: recordings
+    field: song_id
+    type: string
+    meta:
+      collection: recordings
+      conditions: null
+      display: null
+      display_options: null
+      field: song_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: song_id
+      table: recordings
       data_type: varchar
       default_value: null
       max_length: 36
@@ -1706,15 +2358,94 @@ fields:
       has_auto_increment: false
       foreign_key_table: songs
       foreign_key_column: id
-  - collection: songs
-    field: album_id
-    type: string
+  - collection: reproductions
+    field: create_date
+    type: dateTime
     meta:
-      collection: songs
+      collection: reproductions
       conditions: null
       display: null
       display_options: null
-      field: album_id
+      field: create_date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options:
+        includeSeconds: true
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: create_date
+      table: reproductions
+      data_type: datetime
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: reproductions
+    field: id
+    type: uuid
+    meta:
+      collection: reproductions
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: reproductions
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: reproductions
+    field: recording_id
+    type: string
+    meta:
+      collection: reproductions
+      conditions: null
+      display: null
+      display_options: null
+      field: recording_id
       group: null
       hidden: false
       interface: select-dropdown-m2o
@@ -1722,16 +2453,16 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 2
+      sort: null
       special:
         - m2o
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
-      name: album_id
-      table: songs
+      name: recording_id
+      table: reproductions
       data_type: varchar
       default_value: null
       max_length: 36
@@ -1743,62 +2474,37 @@ fields:
       is_generated: false
       generation_expression: null
       has_auto_increment: false
-      foreign_key_table: albums
+      foreign_key_table: recordings
       foreign_key_column: id
-  - collection: songs
-    field: artists
-    type: alias
+  - collection: reproductions
+    field: user_type_id
+    type: string
     meta:
-      collection: songs
+      collection: reproductions
       conditions: null
       display: null
       display_options: null
-      field: artists
+      field: user_type_id
       group: null
       hidden: false
-      interface: list-m2m
+      interface: select-dropdown-m2o
       note: null
       options: null
       readonly: false
-      required: false
-      sort: 3
+      required: true
+      sort: null
       special:
-        - m2m
+        - m2o
       translations: null
       validation: null
       validation_message: null
-      width: half
-  - collection: songs
-    field: date_created
-    type: timestamp
-    meta:
-      collection: songs
-      conditions: null
-      display: datetime
-      display_options:
-        relative: true
-      field: date_created
-      group: null
-      hidden: true
-      interface: datetime
-      note: null
-      options: null
-      readonly: true
-      required: false
-      sort: 9
-      special:
-        - cast-timestamp
-        - date-created
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
+      width: full
     schema:
-      name: date_created
-      table: songs
-      data_type: datetime
+      name: user_type_id
+      table: reproductions
+      data_type: varchar
       default_value: null
-      max_length: null
+      max_length: 36
       numeric_precision: null
       numeric_scale: null
       is_nullable: false
@@ -1807,67 +2513,26 @@ fields:
       is_generated: false
       generation_expression: null
       has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
+      foreign_key_table: user_types
+      foreign_key_column: id
   - collection: songs
-    field: date_updated
-    type: timestamp
-    meta:
-      collection: songs
-      conditions: null
-      display: datetime
-      display_options:
-        relative: true
-      field: date_updated
-      group: null
-      hidden: true
-      interface: datetime
-      note: null
-      options: null
-      readonly: true
-      required: false
-      sort: 10
-      special:
-        - cast-timestamp
-        - date-updated
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: date_updated
-      table: songs
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: songs
-    field: file
+    field: cover_art
     type: uuid
     meta:
       collection: songs
       conditions: null
       display: null
       display_options: null
-      field: file
+      field: cover_art
       group: null
       hidden: false
-      interface: file
+      interface: file-image
       note: null
       options:
-        folder: df4accd6-d2ed-44db-8700-2646548bf09b
+        folder: c69407db-e049-4fa2-bf91-f720aed523e2
       readonly: false
       required: true
-      sort: 6
+      sort: null
       special:
         - file
       translations: null
@@ -1875,7 +2540,7 @@ fields:
       validation_message: null
       width: full
     schema:
-      name: file
+      name: cover_art
       table: songs
       data_type: char
       default_value: null
@@ -1890,6 +2555,44 @@ fields:
       has_auto_increment: false
       foreign_key_table: directus_files
       foreign_key_column: id
+  - collection: songs
+    field: date
+    type: date
+    meta:
+      collection: songs
+      conditions: null
+      display: null
+      display_options: null
+      field: date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date
+      table: songs
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: songs
     field: id
     type: uuid
@@ -1906,7 +2609,7 @@ fields:
       options: null
       readonly: true
       required: false
-      sort: 1
+      sort: null
       special:
         - uuid
       translations: null
@@ -1930,44 +2633,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: songs
-    field: length
-    type: integer
-    meta:
-      collection: songs
-      conditions: null
-      display: null
-      display_options: null
-      field: length
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: 7
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: length
-      table: songs
-      data_type: integer
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: songs
     field: name
     type: string
     meta:
@@ -1983,7 +2648,7 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 4
+      sort: null
       special: null
       translations: null
       validation: null
@@ -2005,15 +2670,207 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
-  - collection: songs
-    field: release_date
-    type: date
+  - collection: subscription_types
+    field: description
+    type: string
     meta:
-      collection: songs
+      collection: subscription_types
       conditions: null
       display: null
       display_options: null
-      field: release_date
+      field: description
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: subscription_types
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: subscription_types
+    field: id
+    type: uuid
+    meta:
+      collection: subscription_types
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: subscription_types
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: subscription_types
+    field: name
+    type: string
+    meta:
+      collection: subscription_types
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: subscription_types
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: user_types
+    field: end_date
+    type: date
+    meta:
+      collection: user_types
+      conditions: null
+      display: null
+      display_options: null
+      field: end_date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: end_date
+      table: user_types
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: user_types
+    field: id
+    type: uuid
+    meta:
+      collection: user_types
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: user_types
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: user_types
+    field: start_date
+    type: date
+    meta:
+      collection: user_types
+      conditions: null
+      display: null
+      display_options: null
+      field: start_date
       group: null
       hidden: false
       interface: datetime
@@ -2021,15 +2878,15 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 5
+      sort: null
       special: null
       translations: null
       validation: null
       validation_message: null
       width: full
     schema:
-      name: release_date
-      table: songs
+      name: start_date
+      table: user_types
       data_type: date
       default_value: null
       max_length: null
@@ -2043,37 +2900,115 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
-  - collection: songs
-    field: track
-    type: integer
+  - collection: user_types
+    field: subscription_type_id
+    type: string
     meta:
-      collection: songs
+      collection: user_types
       conditions: null
       display: null
       display_options: null
-      field: track
+      field: subscription_type_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: subscription_type_id
+      table: user_types
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: subscription_types
+      foreign_key_column: id
+  - collection: user_types
+    field: user_id
+    type: string
+    meta:
+      collection: user_types
+      conditions: null
+      display: null
+      display_options: null
+      field: user_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: user_id
+      table: user_types
+      data_type: char
+      default_value: null
+      max_length: 36
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: users
+      foreign_key_column: id
+  - collection: users
+    field: address
+    type: string
+    meta:
+      collection: users
+      conditions: null
+      display: null
+      display_options: null
+      field: address
       group: null
       hidden: false
       interface: input
       note: null
       options: null
       readonly: false
-      required: true
-      sort: 8
+      required: false
+      sort: null
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
-      name: track
-      table: songs
-      data_type: integer
-      default_value: 1
-      max_length: null
+      name: address
+      table: users
+      data_type: varchar
+      default_value: null
+      max_length: 255
       numeric_precision: null
       numeric_scale: null
-      is_nullable: false
+      is_nullable: true
       is_unique: false
       is_primary_key: false
       is_generated: false
@@ -2081,120 +3016,6 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
-  - collection: songs_artists
-    field: artists_id
-    type: string
-    meta:
-      collection: songs_artists
-      conditions: null
-      display: null
-      display_options: null
-      field: artists_id
-      group: null
-      hidden: true
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: artists_id
-      table: songs_artists
-      data_type: varchar
-      default_value: null
-      max_length: 36
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: artists
-      foreign_key_column: id
-  - collection: songs_artists
-    field: id
-    type: integer
-    meta:
-      collection: songs_artists
-      conditions: null
-      display: null
-      display_options: null
-      field: id
-      group: null
-      hidden: true
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: id
-      table: songs_artists
-      data_type: integer
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: true
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: true
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: songs_artists
-    field: songs_id
-    type: string
-    meta:
-      collection: songs_artists
-      conditions: null
-      display: null
-      display_options: null
-      field: songs_id
-      group: null
-      hidden: true
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: songs_id
-      table: songs_artists
-      data_type: varchar
-      default_value: null
-      max_length: 36
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: songs
-      foreign_key_column: id
   - collection: users
     field: avatar
     type: uuid
@@ -2212,7 +3033,7 @@ fields:
         folder: f67c51d6-436d-4422-9614-c6a417518062
       readonly: false
       required: false
-      sort: 7
+      sort: null
       special:
         - file
       translations: null
@@ -2250,19 +3071,57 @@ fields:
       note: null
       options: null
       readonly: false
-      required: true
-      sort: 5
+      required: false
+      sort: null
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
       name: birthdate
       table: users
       data_type: date
       default_value: null
       max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: users
+    field: city
+    type: string
+    meta:
+      collection: users
+      conditions: null
+      display: null
+      display_options: null
+      field: city
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: city
+      table: users
+      data_type: varchar
+      default_value: null
+      max_length: 255
       numeric_precision: null
       numeric_scale: null
       is_nullable: true
@@ -2289,17 +3148,17 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 6
+      sort: null
       special:
         - m2o
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
       name: country_id
       table: users
-      data_type: varchar
+      data_type: char
       default_value: null
       max_length: 36
       numeric_precision: null
@@ -2313,96 +3172,14 @@ fields:
       foreign_key_table: countries
       foreign_key_column: id
   - collection: users
-    field: date_created
-    type: timestamp
-    meta:
-      collection: users
-      conditions: null
-      display: datetime
-      display_options:
-        relative: true
-      field: date_created
-      group: null
-      hidden: true
-      interface: datetime
-      note: null
-      options: null
-      readonly: true
-      required: false
-      sort: 8
-      special:
-        - cast-timestamp
-        - date-created
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: date_created
-      table: users
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users
-    field: date_updated
-    type: timestamp
-    meta:
-      collection: users
-      conditions: null
-      display: datetime
-      display_options:
-        relative: true
-      field: date_updated
-      group: null
-      hidden: true
-      interface: datetime
-      note: null
-      options: null
-      readonly: true
-      required: false
-      sort: 9
-      special:
-        - cast-timestamp
-        - date-updated
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: date_updated
-      table: users
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users
-    field: directus_user
+    field: directus_user_id
     type: string
     meta:
       collection: users
       conditions: null
       display: null
       display_options: null
-      field: directus_user
+      field: directus_user_id
       group: null
       hidden: false
       interface: select-dropdown-m2o
@@ -2418,7 +3195,7 @@ fields:
       validation_message: null
       width: full
     schema:
-      name: directus_user
+      name: directus_user_id
       table: users
       data_type: varchar
       default_value: null
@@ -2426,7 +3203,7 @@ fields:
       numeric_precision: null
       numeric_scale: null
       is_nullable: false
-      is_unique: true
+      is_unique: false
       is_primary_key: false
       is_generated: false
       generation_expression: null
@@ -2449,12 +3226,12 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 3
+      sort: null
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
       name: first_name
       table: users
@@ -2472,75 +3249,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: users
-    field: heared_albums
-    type: alias
-    meta:
-      collection: users
-      conditions: null
-      display: null
-      display_options: null
-      field: heared_albums
-      group: null
-      hidden: false
-      interface: list-m2m
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special:
-        - m2m
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: users
-    field: heared_playlists
-    type: alias
-    meta:
-      collection: users
-      conditions: null
-      display: null
-      display_options: null
-      field: heared_playlists
-      group: null
-      hidden: false
-      interface: list-m2m
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special:
-        - m2m
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: users
-    field: heared_songs
-    type: alias
-    meta:
-      collection: users
-      conditions: null
-      display: null
-      display_options: null
-      field: heared_songs
-      group: null
-      hidden: false
-      interface: list-m2m
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special:
-        - m2m
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: users
     field: id
     type: uuid
     meta:
@@ -2556,7 +3264,7 @@ fields:
       options: null
       readonly: true
       required: false
-      sort: 1
+      sort: null
       special:
         - uuid
       translations: null
@@ -2580,6 +3288,46 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: users
+    field: join_date
+    type: dateTime
+    meta:
+      collection: users
+      conditions: null
+      display: null
+      display_options: null
+      field: join_date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options:
+        includeSeconds: false
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: join_date
+      table: users
+      data_type: datetime
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: users
     field: last_name
     type: string
     meta:
@@ -2595,12 +3343,12 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 4
+      sort: null
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
       name: last_name
       table: users
@@ -2610,6 +3358,44 @@ fields:
       numeric_precision: null
       numeric_scale: null
       is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: users
+    field: state
+    type: string
+    meta:
+      collection: users
+      conditions: null
+      display: null
+      display_options: null
+      field: state
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: state
+      table: users
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
       is_unique: false
       is_primary_key: false
       is_generated: false
@@ -2633,7 +3419,7 @@ fields:
       options: null
       readonly: false
       required: true
-      sort: 2
+      sort: null
       special: null
       translations: null
       validation: null
@@ -2655,32 +3441,71 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
-  - collection: users_albums
-    field: albums_id
-    type: string
+  - collection: users
+    field: zip_code
+    type: integer
     meta:
-      collection: users_albums
+      collection: users
       conditions: null
       display: null
       display_options: null
-      field: albums_id
+      field: zip_code
       group: null
       hidden: false
-      interface: null
+      interface: input
       note: null
       options: null
       readonly: false
-      required: true
+      required: false
       sort: null
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: half
+      width: full
     schema:
-      name: albums_id
-      table: users_albums
-      data_type: varchar
+      name: zip_code
+      table: users
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: writers
+    field: artist_id
+    type: string
+    meta:
+      collection: writers
+      conditions: null
+      display: null
+      display_options: null
+      field: artist_id
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: artist_id
+      table: writers
+      data_type: char
       default_value: null
       max_length: 36
       numeric_precision: null
@@ -2691,619 +3516,74 @@ fields:
       is_generated: false
       generation_expression: null
       has_auto_increment: false
-      foreign_key_table: albums
+      foreign_key_table: artists
       foreign_key_column: id
-  - collection: users_albums
+  - collection: writers
     field: id
-    type: integer
+    type: uuid
     meta:
-      collection: users_albums
+      collection: writers
       conditions: null
       display: null
       display_options: null
       field: id
       group: null
-      hidden: false
-      interface: null
+      hidden: true
+      interface: input
       note: null
       options: null
-      readonly: false
+      readonly: true
       required: false
       sort: null
-      special: null
+      special:
+        - uuid
       translations: null
       validation: null
       validation_message: null
       width: full
     schema:
       name: id
-      table: users_albums
-      data_type: integer
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: true
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: true
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_albums
-    field: last_time_heard
-    type: timestamp
-    meta:
-      collection: users_albums
-      conditions: null
-      display: null
-      display_options: null
-      field: last_time_heard
-      group: null
-      hidden: false
-      interface: datetime
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: null
-      special:
-        - cast-timestamp
-        - date-created
-        - date-updated
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: last_time_heard
-      table: users_albums
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_albums
-    field: liked
-    type: boolean
-    meta:
-      collection: users_albums
-      conditions: null
-      display: null
-      display_options: null
-      field: liked
-      group: null
-      hidden: false
-      interface: boolean
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special:
-        - cast-boolean
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: liked
-      table: users_albums
-      data_type: boolean
-      default_value: false
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_albums
-    field: liked_at
-    type: timestamp
-    meta:
-      collection: users_albums
-      conditions: null
-      display: null
-      display_options: null
-      field: liked_at
-      group: null
-      hidden: false
-      interface: datetime
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special:
-        - cast-timestamp
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: liked_at
-      table: users_albums
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_albums
-    field: users_id
-    type: string
-    meta:
-      collection: users_albums
-      conditions: null
-      display: null
-      display_options: null
-      field: users_id
-      group: null
-      hidden: false
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: users_id
-      table: users_albums
-      data_type: varchar
+      table: writers
+      data_type: char
       default_value: null
       max_length: 36
       numeric_precision: null
       numeric_scale: null
       is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: users
-      foreign_key_column: id
-  - collection: users_playlists
-    field: id
-    type: integer
-    meta:
-      collection: users_playlists
-      conditions: null
-      display: null
-      display_options: null
-      field: id
-      group: null
-      hidden: false
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: id
-      table: users_playlists
-      data_type: integer
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
+      is_unique: true
       is_primary_key: true
       is_generated: false
       generation_expression: null
-      has_auto_increment: true
+      has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
-  - collection: users_playlists
-    field: last_time_heard
-    type: timestamp
+  - collection: writers
+    field: song_id
+    type: string
     meta:
-      collection: users_playlists
+      collection: writers
       conditions: null
       display: null
       display_options: null
-      field: last_time_heard
+      field: song_id
       group: null
       hidden: false
-      interface: datetime
+      interface: select-dropdown-m2o
       note: null
       options: null
       readonly: false
       required: true
       sort: null
       special:
-        - cast-timestamp
-        - date-created
-        - date-updated
+        - m2o
       translations: null
       validation: null
       validation_message: null
       width: full
     schema:
-      name: last_time_heard
-      table: users_playlists
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_playlists
-    field: liked
-    type: boolean
-    meta:
-      collection: users_playlists
-      conditions: null
-      display: null
-      display_options: null
-      field: liked
-      group: null
-      hidden: false
-      interface: boolean
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special:
-        - cast-boolean
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: liked
-      table: users_playlists
-      data_type: boolean
-      default_value: false
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_playlists
-    field: liked_at
-    type: timestamp
-    meta:
-      collection: users_playlists
-      conditions: null
-      display: null
-      display_options: null
-      field: liked_at
-      group: null
-      hidden: false
-      interface: datetime
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special:
-        - cast-timestamp
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: liked_at
-      table: users_playlists
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_playlists
-    field: playlists_id
-    type: string
-    meta:
-      collection: users_playlists
-      conditions: null
-      display: null
-      display_options: null
-      field: playlists_id
-      group: null
-      hidden: false
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: playlists_id
-      table: users_playlists
-      data_type: varchar
-      default_value: null
-      max_length: 36
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: playlists
-      foreign_key_column: id
-  - collection: users_playlists
-    field: users_id
-    type: string
-    meta:
-      collection: users_playlists
-      conditions: null
-      display: null
-      display_options: null
-      field: users_id
-      group: null
-      hidden: false
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: users_id
-      table: users_playlists
-      data_type: varchar
-      default_value: null
-      max_length: 36
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: users
-      foreign_key_column: id
-  - collection: users_songs
-    field: id
-    type: integer
-    meta:
-      collection: users_songs
-      conditions: null
-      display: null
-      display_options: null
-      field: id
-      group: null
-      hidden: false
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: id
-      table: users_songs
-      data_type: integer
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: true
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: true
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_songs
-    field: last_time_heard
-    type: timestamp
-    meta:
-      collection: users_songs
-      conditions: null
-      display: null
-      display_options: null
-      field: last_time_heard
-      group: null
-      hidden: false
-      interface: datetime
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: null
-      special:
-        - cast-timestamp
-        - date-created
-        - date-updated
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: last_time_heard
-      table: users_songs
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_songs
-    field: liked
-    type: boolean
-    meta:
-      collection: users_songs
-      conditions: null
-      display: null
-      display_options: null
-      field: liked
-      group: null
-      hidden: false
-      interface: boolean
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special:
-        - cast-boolean
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: liked
-      table: users_songs
-      data_type: boolean
-      default_value: false
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_songs
-    field: liked_at
-    type: timestamp
-    meta:
-      collection: users_songs
-      conditions: null
-      display: null
-      display_options: null
-      field: liked_at
-      group: null
-      hidden: false
-      interface: datetime
-      note: null
-      options: null
-      readonly: false
-      required: false
-      sort: null
-      special:
-        - cast-timestamp
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: liked_at
-      table: users_songs
-      data_type: datetime
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: users_songs
-    field: songs_id
-    type: string
-    meta:
-      collection: users_songs
-      conditions: null
-      display: null
-      display_options: null
-      field: songs_id
-      group: null
-      hidden: false
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: songs_id
-      table: users_songs
-      data_type: varchar
+      name: song_id
+      table: writers
+      data_type: char
       default_value: null
       max_length: 36
       numeric_precision: null
@@ -3316,45 +3596,91 @@ fields:
       has_auto_increment: false
       foreign_key_table: songs
       foreign_key_column: id
-  - collection: users_songs
-    field: users_id
-    type: string
-    meta:
-      collection: users_songs
-      conditions: null
-      display: null
-      display_options: null
-      field: users_id
-      group: null
-      hidden: false
-      interface: null
-      note: null
-      options: null
-      readonly: false
-      required: true
-      sort: null
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: users_id
-      table: users_songs
-      data_type: varchar
-      default_value: null
-      max_length: 36
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: users
-      foreign_key_column: id
 relations:
+  - collection: accesses
+    field: playlist_recording_id
+    related_collection: playlist_recordings
+    meta:
+      junction_field: null
+      many_collection: accesses
+      many_field: playlist_recording_id
+      one_allowed_collections: null
+      one_collection: playlist_recordings
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: accesses
+      column: playlist_recording_id
+      foreign_key_table: playlist_recordings
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: accesses
+    field: user_type_id
+    related_collection: user_types
+    meta:
+      junction_field: null
+      many_collection: accesses
+      many_field: user_type_id
+      one_allowed_collections: null
+      one_collection: user_types
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: accesses
+      column: user_type_id
+      foreign_key_table: user_types
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: album_recordings
+    field: album_id
+    related_collection: albums
+    meta:
+      junction_field: null
+      many_collection: album_recordings
+      many_field: album_id
+      one_allowed_collections: null
+      one_collection: albums
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: album_recordings
+      column: album_id
+      foreign_key_table: albums
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: album_recordings
+    field: recording_id
+    related_collection: recordings
+    meta:
+      junction_field: null
+      many_collection: album_recordings
+      many_field: recording_id
+      one_allowed_collections: null
+      one_collection: recordings
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: album_recordings
+      column: recording_id
+      foreign_key_table: recordings
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: SET NULL
   - collection: albums
     field: cover_art
     related_collection: directus_files
@@ -3376,86 +3702,23 @@ relations:
       constraint_name: null
       on_update: NO ACTION
       on_delete: SET NULL
-  - collection: albums_artists
-    field: albums_id
-    related_collection: albums
+  - collection: albums
+    field: label_id
+    related_collection: labels
     meta:
-      junction_field: artists_id
-      many_collection: albums_artists
-      many_field: albums_id
+      junction_field: null
+      many_collection: albums
+      many_field: label_id
       one_allowed_collections: null
-      one_collection: albums
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: artists
-      sort_field: null
-    schema:
-      table: albums_artists
-      column: albums_id
-      foreign_key_table: albums
-      foreign_key_column: id
-      constraint_name: null
-      on_update: NO ACTION
-      on_delete: NO ACTION
-  - collection: albums_artists
-    field: artists_id
-    related_collection: artists
-    meta:
-      junction_field: albums_id
-      many_collection: albums_artists
-      many_field: artists_id
-      one_allowed_collections: null
-      one_collection: artists
+      one_collection: labels
       one_collection_field: null
       one_deselect_action: nullify
       one_field: null
       sort_field: null
     schema:
-      table: albums_artists
-      column: artists_id
-      foreign_key_table: artists
-      foreign_key_column: id
-      constraint_name: null
-      on_update: NO ACTION
-      on_delete: NO ACTION
-  - collection: albums_genres
-    field: albums_id
-    related_collection: albums
-    meta:
-      junction_field: genres_id
-      many_collection: albums_genres
-      many_field: albums_id
-      one_allowed_collections: null
-      one_collection: albums
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: genres
-      sort_field: null
-    schema:
-      table: albums_genres
-      column: albums_id
-      foreign_key_table: albums
-      foreign_key_column: id
-      constraint_name: null
-      on_update: NO ACTION
-      on_delete: NO ACTION
-  - collection: albums_genres
-    field: genres_id
-    related_collection: genres
-    meta:
-      junction_field: albums_id
-      many_collection: albums_genres
-      many_field: genres_id
-      one_allowed_collections: null
-      one_collection: genres
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: null
-      sort_field: null
-    schema:
-      table: albums_genres
-      column: genres_id
-      foreign_key_table: genres
+      table: albums
+      column: label_id
+      foreign_key_table: labels
       foreign_key_column: id
       constraint_name: null
       on_update: NO ACTION
@@ -3481,6 +3744,69 @@ relations:
       constraint_name: null
       on_update: NO ACTION
       on_delete: SET NULL
+  - collection: collaborators
+    field: collaborator_type_id
+    related_collection: collaborator_types
+    meta:
+      junction_field: null
+      many_collection: collaborators
+      many_field: collaborator_type_id
+      one_allowed_collections: null
+      one_collection: collaborator_types
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: collaborators
+      column: collaborator_type_id
+      foreign_key_table: collaborator_types
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: collaborators
+    field: playlist_id
+    related_collection: playlists
+    meta:
+      junction_field: null
+      many_collection: collaborators
+      many_field: playlist_id
+      one_allowed_collections: null
+      one_collection: playlists
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: collaborators
+      column: playlist_id
+      foreign_key_table: playlists
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: collaborators
+    field: user_type_id
+    related_collection: users
+    meta:
+      junction_field: null
+      many_collection: collaborators
+      many_field: user_type_id
+      one_allowed_collections: null
+      one_collection: users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: collaborators
+      column: user_type_id
+      foreign_key_table: users
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
   - collection: directus_users
     field: user_id
     related_collection: users
@@ -3502,23 +3828,44 @@ relations:
       constraint_name: null
       on_update: NO ACTION
       on_delete: NO ACTION
-  - collection: playlists
-    field: owner_id
-    related_collection: users
+  - collection: playlist_recordings
+    field: playlist_id
+    related_collection: playlists
     meta:
       junction_field: null
-      many_collection: playlists
-      many_field: owner_id
+      many_collection: playlist_recordings
+      many_field: playlist_id
       one_allowed_collections: null
-      one_collection: users
+      one_collection: playlists
       one_collection_field: null
       one_deselect_action: nullify
       one_field: null
       sort_field: null
     schema:
-      table: playlists
-      column: owner_id
-      foreign_key_table: users
+      table: playlist_recordings
+      column: playlist_id
+      foreign_key_table: playlists
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: playlist_recordings
+    field: recording_id
+    related_collection: recordings
+    meta:
+      junction_field: null
+      many_collection: playlist_recordings
+      many_field: recording_id
+      one_allowed_collections: null
+      one_collection: recordings
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: playlist_recordings
+      column: recording_id
+      foreign_key_table: recordings
       foreign_key_column: id
       constraint_name: null
       on_update: NO ACTION
@@ -3544,75 +3891,33 @@ relations:
       constraint_name: null
       on_update: NO ACTION
       on_delete: SET NULL
-  - collection: playlists_songs
-    field: playlists_id
-    related_collection: playlists
-    meta:
-      junction_field: songs_id
-      many_collection: playlists_songs
-      many_field: playlists_id
-      one_allowed_collections: null
-      one_collection: playlists
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: songs
-      sort_field: null
-    schema:
-      table: playlists_songs
-      column: playlists_id
-      foreign_key_table: playlists
-      foreign_key_column: id
-      constraint_name: null
-      on_update: NO ACTION
-      on_delete: NO ACTION
-  - collection: playlists_songs
-    field: songs_id
-    related_collection: songs
-    meta:
-      junction_field: playlists_id
-      many_collection: playlists_songs
-      many_field: songs_id
-      one_allowed_collections: null
-      one_collection: songs
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: null
-      sort_field: null
-    schema:
-      table: playlists_songs
-      column: songs_id
-      foreign_key_table: songs
-      foreign_key_column: id
-      constraint_name: null
-      on_update: NO ACTION
-      on_delete: NO ACTION
-  - collection: songs
-    field: album_id
-    related_collection: albums
+  - collection: playlists
+    field: playlist_type_id
+    related_collection: playlist_types
     meta:
       junction_field: null
-      many_collection: songs
-      many_field: album_id
+      many_collection: playlists
+      many_field: playlist_type_id
       one_allowed_collections: null
-      one_collection: albums
+      one_collection: playlist_types
       one_collection_field: null
       one_deselect_action: nullify
       one_field: null
       sort_field: null
     schema:
-      table: songs
-      column: album_id
-      foreign_key_table: albums
+      table: playlists
+      column: playlist_type_id
+      foreign_key_table: playlist_types
       foreign_key_column: id
       constraint_name: null
       on_update: NO ACTION
       on_delete: NO ACTION
-  - collection: songs
+  - collection: recordings
     field: file
     related_collection: directus_files
     meta:
       junction_field: null
-      many_collection: songs
+      many_collection: recordings
       many_field: file
       one_allowed_collections: null
       one_collection: directus_files
@@ -3621,51 +3926,156 @@ relations:
       one_field: null
       sort_field: null
     schema:
-      table: songs
+      table: recordings
       column: file
       foreign_key_table: directus_files
       foreign_key_column: id
       constraint_name: null
       on_update: NO ACTION
       on_delete: NO ACTION
-  - collection: songs_artists
-    field: artists_id
-    related_collection: artists
+  - collection: recordings
+    field: genre_id
+    related_collection: genres
     meta:
-      junction_field: songs_id
-      many_collection: songs_artists
-      many_field: artists_id
+      junction_field: null
+      many_collection: recordings
+      many_field: genre_id
       one_allowed_collections: null
-      one_collection: artists
+      one_collection: genres
       one_collection_field: null
       one_deselect_action: nullify
       one_field: null
       sort_field: null
     schema:
-      table: songs_artists
-      column: artists_id
-      foreign_key_table: artists
+      table: recordings
+      column: genre_id
+      foreign_key_table: genres
       foreign_key_column: id
       constraint_name: null
       on_update: NO ACTION
       on_delete: NO ACTION
-  - collection: songs_artists
-    field: songs_id
+  - collection: recordings
+    field: song_id
     related_collection: songs
     meta:
-      junction_field: artists_id
-      many_collection: songs_artists
-      many_field: songs_id
+      junction_field: null
+      many_collection: recordings
+      many_field: song_id
       one_allowed_collections: null
       one_collection: songs
       one_collection_field: null
       one_deselect_action: nullify
-      one_field: artists
+      one_field: null
       sort_field: null
     schema:
-      table: songs_artists
-      column: songs_id
+      table: recordings
+      column: song_id
       foreign_key_table: songs
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: reproductions
+    field: recording_id
+    related_collection: recordings
+    meta:
+      junction_field: null
+      many_collection: reproductions
+      many_field: recording_id
+      one_allowed_collections: null
+      one_collection: recordings
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: reproductions
+      column: recording_id
+      foreign_key_table: recordings
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: reproductions
+    field: user_type_id
+    related_collection: user_types
+    meta:
+      junction_field: null
+      many_collection: reproductions
+      many_field: user_type_id
+      one_allowed_collections: null
+      one_collection: user_types
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: reproductions
+      column: user_type_id
+      foreign_key_table: user_types
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: songs
+    field: cover_art
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: songs
+      many_field: cover_art
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: songs
+      column: cover_art
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: user_types
+    field: subscription_type_id
+    related_collection: subscription_types
+    meta:
+      junction_field: null
+      many_collection: user_types
+      many_field: subscription_type_id
+      one_allowed_collections: null
+      one_collection: subscription_types
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: user_types
+      column: subscription_type_id
+      foreign_key_table: subscription_types
+      foreign_key_column: id
+      constraint_name: null
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: user_types
+    field: user_id
+    related_collection: users
+    meta:
+      junction_field: null
+      many_collection: user_types
+      many_field: user_id
+      one_allowed_collections: null
+      one_collection: users
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: user_types
+      column: user_id
+      foreign_key_table: users
       foreign_key_column: id
       constraint_name: null
       on_update: NO ACTION
@@ -3713,12 +4123,12 @@ relations:
       on_update: NO ACTION
       on_delete: NO ACTION
   - collection: users
-    field: directus_user
+    field: directus_user_id
     related_collection: directus_users
     meta:
       junction_field: null
       many_collection: users
-      many_field: directus_user
+      many_field: directus_user_id
       one_allowed_collections: null
       one_collection: directus_users
       one_collection_field: null
@@ -3727,103 +4137,40 @@ relations:
       sort_field: null
     schema:
       table: users
-      column: directus_user
+      column: directus_user_id
       foreign_key_table: directus_users
       foreign_key_column: id
       constraint_name: null
       on_update: NO ACTION
       on_delete: NO ACTION
-  - collection: users_albums
-    field: albums_id
-    related_collection: albums
+  - collection: writers
+    field: artist_id
+    related_collection: artists
     meta:
-      junction_field: users_id
-      many_collection: users_albums
-      many_field: albums_id
-      one_allowed_collections: []
-      one_collection: albums
-      one_collection_field: collection
-      one_deselect_action: nullify
-      one_field: null
-      sort_field: null
-    schema:
-      table: users_albums
-      column: albums_id
-      foreign_key_table: albums
-      foreign_key_column: id
-      constraint_name: null
-      on_update: NO ACTION
-      on_delete: NO ACTION
-  - collection: users_albums
-    field: users_id
-    related_collection: users
-    meta:
-      junction_field: albums_id
-      many_collection: users_albums
-      many_field: users_id
+      junction_field: null
+      many_collection: writers
+      many_field: artist_id
       one_allowed_collections: null
-      one_collection: users
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: heared_albums
-      sort_field: null
-    schema:
-      table: users_albums
-      column: users_id
-      foreign_key_table: users
-      foreign_key_column: id
-      constraint_name: null
-      on_update: NO ACTION
-      on_delete: NO ACTION
-  - collection: users_playlists
-    field: playlists_id
-    related_collection: playlists
-    meta:
-      junction_field: users_id
-      many_collection: users_playlists
-      many_field: playlists_id
-      one_allowed_collections: null
-      one_collection: playlists
+      one_collection: artists
       one_collection_field: null
       one_deselect_action: nullify
       one_field: null
       sort_field: null
     schema:
-      table: users_playlists
-      column: playlists_id
-      foreign_key_table: playlists
+      table: writers
+      column: artist_id
+      foreign_key_table: artists
       foreign_key_column: id
       constraint_name: null
       on_update: NO ACTION
       on_delete: NO ACTION
-  - collection: users_playlists
-    field: users_id
-    related_collection: users
-    meta:
-      junction_field: playlists_id
-      many_collection: users_playlists
-      many_field: users_id
-      one_allowed_collections: null
-      one_collection: users
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: heared_playlists
-      sort_field: null
-    schema:
-      table: users_playlists
-      column: users_id
-      foreign_key_table: users
-      foreign_key_column: id
-      constraint_name: null
-      on_update: NO ACTION
-      on_delete: NO ACTION
-  - collection: users_songs
-    field: songs_id
+  - collection: writers
+    field: song_id
     related_collection: songs
     meta:
-      junction_field: users_id
-      many_collection: users_songs
-      many_field: songs_id
+      junction_field: null
+      many_collection: writers
+      many_field: song_id
       one_allowed_collections: null
       one_collection: songs
       one_collection_field: null
@@ -3831,30 +4178,9 @@ relations:
       one_field: null
       sort_field: null
     schema:
-      table: users_songs
-      column: songs_id
+      table: writers
+      column: song_id
       foreign_key_table: songs
-      foreign_key_column: id
-      constraint_name: null
-      on_update: NO ACTION
-      on_delete: NO ACTION
-  - collection: users_songs
-    field: users_id
-    related_collection: users
-    meta:
-      junction_field: songs_id
-      many_collection: users_songs
-      many_field: users_id
-      one_allowed_collections: null
-      one_collection: users
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: heared_songs
-      sort_field: null
-    schema:
-      table: users_songs
-      column: users_id
-      foreign_key_table: users
       foreign_key_column: id
       constraint_name: null
       on_update: NO ACTION
